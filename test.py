@@ -104,22 +104,22 @@ player_hand = []
 dealer_hand = []
 scores = {"Gracz": 0, "Kasyno": 0}
 
-player_frame = tk.Frame(window)
+player_frame = tk.Frame()
 player_frame.pack(pady=10)
-dealer_frame = tk.Frame(window)
+dealer_frame = tk.Frame()
 dealer_frame.pack(pady=10)
 
-info_label = tk.Label(window, text="Zagrajmy w Blackjack! Pierwsza runda w ciemno")
+info_label = tk.Label( text="Zagrajmy w Blackjack! Pierwsza runda w ciemno")
 info_label.pack(pady=10)
 
-score_frame = tk.Frame(window)
+score_frame = tk.Frame()
 score_frame.pack(pady=10)
 player_score_label = tk.Label(score_frame, text="Wygrane Gracza: 0")
 player_score_label.pack(side=tk.LEFT, padx=10)
 dealer_score_label = tk.Label(score_frame, text="Wygrane Kasyna: 0")
 dealer_score_label.pack(side=tk.RIGHT, padx=10)
 
-buttons_frame = tk.Frame(window)
+buttons_frame = tk.Frame()
 buttons_frame.pack()
 hit_button = tk.Button(buttons_frame, text="Hit", command=lambda: hit(deck, player_hand, player_frame, info_label, hit_button, stand_button, player_score_label, dealer_score_label, scores))
 hit_button.grid(row=0, column=0, padx=10)
